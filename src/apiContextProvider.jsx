@@ -23,30 +23,30 @@ const ApiContextProvider = (props) => {
       console.log(posts)
       setCopd(posts)
     }
-    // async function loadnierfalen() {
-    //   const response = await fetch(siteUrl1, { mode: 'no-cors' })
-    //   if (!response.ok) {
-    //     console.log('error')
-    //     return
-    //   }
+    async function loadnierfalen() {
+      const response = await fetch(siteUrl1, { mode: 'no-cors' })
+      if (!response.ok) {
+        console.log('error')
+        return
+      }
 
-    //   const posts = await response.json()
-    //   setNierFalen(posts)
-    // }
-    // async function loaddiabetes() {
-    //   const response = await fetch(siteUrl3, { mode: 'no-cors' })
-    //   if (!response.ok) {
-    //     console.log('error')
-    //     return
-    //   }
+      const posts = await response.json()
+      setNierFalen(posts)
+    }
+    async function loaddiabetes() {
+      const response = await fetch(siteUrl3, { mode: 'no-cors' })
+      if (!response.ok) {
+        console.log('error')
+        return
+      }
 
-    //   const posts = await response.json()
-    //   setDiabetes(posts)
-    // }
+      const posts = await response.json()
+      setDiabetes(posts)
+    }
 
     loadcopd()
-    // loadnierfalen()
-    // loaddiabetes()
+    loadnierfalen()
+    loaddiabetes()
   }, [])
 
   return (
