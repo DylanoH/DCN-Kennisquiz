@@ -6,9 +6,11 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import ApiContextProvider from './apiContextProvider'
 
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
+  <ApiContextProvider>
+    <Router>
+      <App />
+    </Router>
+  </ApiContextProvider>,
   document.getElementById('root')
 )
 
