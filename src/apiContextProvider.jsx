@@ -13,7 +13,7 @@ const ApiContextProvider = (props) => {
 
   useEffect(() => {
     async function loadcopd() {
-      const response = await fetch(siteUrl2, { mode: 'no-cors' })
+      const response = await fetch(siteUrl2)
       if (!response.ok) {
         console.log('error')
         return
@@ -24,7 +24,7 @@ const ApiContextProvider = (props) => {
       setCopd(posts)
     }
     async function loadnierfalen() {
-      const response = await fetch(siteUrl1, { mode: 'no-cors' })
+      const response = await fetch(siteUrl1)
       if (!response.ok) {
         console.log('error')
         return
@@ -34,7 +34,7 @@ const ApiContextProvider = (props) => {
       setNierFalen(posts)
     }
     async function loaddiabetes() {
-      const response = await fetch(siteUrl3, { mode: 'no-cors' })
+      const response = await fetch(siteUrl3)
       if (!response.ok) {
         console.log('error')
         return
