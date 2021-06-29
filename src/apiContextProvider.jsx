@@ -13,7 +13,7 @@ const ApiContextProvider = (props) => {
 
   useEffect(() => {
     async function loadcopd() {
-      const response = await fetch(siteUrl2)
+      const response = await fetch(siteUrl2, { mode: 'no-cors' })
       if (!response.ok) {
         console.log('error')
         return
