@@ -20,6 +20,7 @@ const ApiContextProvider = (props) => {
       }
 
       const posts = await response.json()
+      console.log(posts)
       setCopd(posts)
     }
     async function loadnierfalen() {
